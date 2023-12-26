@@ -33,7 +33,7 @@ To simplify things for a future step, beginners should also run
 git config --global pull.rebase false
 ```
 
-2. **Create a fork of this repository**: A **fork** is a "GitHub copy" 
+3. **Create a fork of this repository**: A **fork** is a "GitHub copy" 
 of a repository that lives under your own account and that you can 
 modify however you want. To create a fork, click on the "Fork"
 button near the top of this page, and click "Create fork" in the ensuing
@@ -41,7 +41,7 @@ page. This will henceforth be called your **remote** repository, since it's
 a copy of your project, but it doesn't live on your computer - it lives in
 GitHub servers in some remote location.
 
-3. **Create a clone of the repository on your local machine**: 
+4. **Create a clone of the repository on your local machine**: 
 A **clone** is a local (on your machine) copy of a GitHub repository. 
 To create a clone, you can type 
 ```$ git clone <fork-url>```
@@ -50,7 +50,7 @@ Henceforth, this will be called your **local** repository.
 You should navigate into the folder that was just created with
 ```$ cd lbd-sato-tate```
 
-4. **Start making changes:** A good guide for these next few steps is
+5. **Start making changes:** A good guide for these next few steps is
 (here)[https://rogerdudler.github.io/git-guide/]. 
 
 To get a sense for what's happening in the following, first run
@@ -84,7 +84,7 @@ Changes to be committed:
 	new file:   README.md
 ```
 
-5. **Commit your changes:** You can commit your changes with the command
+6. **Commit your changes:** You can commit your changes with the command
 ```
 $ git commit -m <commit message>
 ```
@@ -95,7 +95,7 @@ This is because the staged changes have been moved to a commit,
 and your working directory is now clean (with respect to the
 latest commit). 
 
-5. **See the changes you've made so far:** Run 
+7. **See the changes you've made so far:** Run 
 ```$ git log``` to see your existing commits.
 You will notice that `(origin/main)` and `(HEAD -> main)`,
 which used to be together, are now separated. For example,
@@ -121,11 +121,11 @@ repository (your fork on GitHub).
 You can generally make the output of `git log` more descriptive
 with ```$ git log --graph --decorate```
 
-6. **Push your local changes to your remote repository** Run
+8. **Push your local changes to your remote repository** Run
 ```$ git push```
 to push your commit to your fork on GitHub.
 
-5. **Incorporate changes to the upstream repository onto your remote:**
+9. **Incorporate changes to the upstream repository onto your remote:**
 The **upstream repository** is the original repository from which your 
 remote repository was forked. On the GitHub page for your fork, if you see something like
 "This branch is 4 commits behind abhijitm-mudigonda/lbd-sato-tate:main" (meaning that
@@ -133,7 +133,7 @@ the upstream repository has 4 commits that you do not),
 you can click the "Sync Fork" button to catch your remote repository up with 
 the upstream repository. 
 
-6. **Incorporate changes to your remote onto your local repository:**
+10. **Incorporate changes to your remote onto your local repository:**
 Running 
 ```$ git pull```
 will pull changes to your remote repo down to your local repository. 
@@ -174,7 +174,7 @@ which resolves changes between the remote repository and your local repository.
 Normally, a commit will have just one parent, but a merge commit will have two,
 one for each branch it's reconciling.
 
-7. **Incorporate changes from your remote repository into the upstream repository:**
+11. **Incorporate changes from your remote repository into the upstream repository:**
 Say that you've done the above steps a few times, and have `push`ed a bunch of 
 shiny new changes to your remote repository which you now want to introduce to
 the upstream repository. In practice, this is when your changes 
