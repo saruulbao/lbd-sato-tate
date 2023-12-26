@@ -34,10 +34,10 @@ def modform_histogram():
 
 def aps_histogram(aps, B=85):
     # normalize the aps 
-    #normalized_aps = [RR(ap) / RR(sqrt(p)) for ap, p in zip(aps, primes_first_n(len(aps)))]
+    normalized_aps = [RR(ap) / RR(sqrt(p)) for ap, p in zip(aps, primes_first_n(len(aps)))]
 
     # create a histogram from the given data with B bins
-    plt.hist(aps, bins=B)
+    plt.hist(normalized_aps, bins=B)
     # display the histogram
     plt.show(block=False)
     # save the histogram to a file
