@@ -3,8 +3,8 @@ if you're ever trying to understand an unfamiliar repository.
 
 
 To get set up, follow the following. Note that all commands (things
-that `look like this`) should be typed into Terminal on MacOS/Linux and 
-into Git Bash on Windows (which should come with your installation). 
+that `$ look like this`) should be typed into Terminal on MacOS/Linux 
+(without the dollar sign) and into WSL or Git Bash on Windows. 
 
 0. **Install Sage and Git:** If you have a Windows machine, you should follow the 
 instructions given in the links for 
@@ -139,10 +139,40 @@ Running
 will pull changes to your remote repo down to your local repository. 
 After you've done so, run
 ```$ git log --graph --decorate```
-This probably looks kind of confusing! Git has created a **merge commit**
+This probably looks something like this:
+
+```
+$ git log --graph --decorate
+*   commit d7581ddaa78be88ce67d54afb08edbca639b05a4 (HEAD -> main)
+|\  Merge: 59cee3b 1f37673
+| | Author: Abhijit S Mudigonda <abhijit.mudigonda@gmail.com>
+| | Date:   Tue Dec 26 10:34:11 2023 -0600
+| |
+| |     Merge branch 'main' of https://github.com/abhijit-mudigonda/lbd-sato-tate
+| |
+| * commit 1f37673b7d3cdf7f565d754094e673edab7811dc (origin/main)
+| | Author: Abhijit S Mudigonda <abhijit.mudigonda@gmail.com>
+| | Date:   Tue Dec 26 10:10:32 2023 -0600
+| |
+| |     some other changes to README
+| |
+* | commit 59cee3b73f834c003c21e846f5a4e9598d0edb09
+|/  Author: Abhijit S Mudigonda <abhijit.mudigonda@gmail.com>
+|   Date:   Tue Dec 26 10:10:32 2023 -0600
+|
+|       add README
+|
+* commit a5601591d88028097b01a01be6050c62175dfb85
+| Author: Abhijit S Mudigonda <abhijit.mudigonda@gmail.com>
+| Date:   Tue Dec 26 02:36:16 2023 -0600
+|
+|     gitignore .png and .sage.py
+```
+
+Git has created a **merge commit**
 which resolves changes between the remote repository and your local repository.
 Normally, a commit will have just one parent, but a merge commit will have two,
-one for each branch it's reconciling. 
+one for each branch it's reconciling.
 
 7. **Incorporate changes from your remote repository into the upstream repository:**
 Say that you've done the above steps a few times, and have `push`ed a bunch of 
@@ -150,3 +180,5 @@ shiny new changes to your remote repository which you now want to introduce to
 the upstream repository. In practice, this is when your changes 
 go out to the world and to your collaborators. The basic process is
 to create a **pull request** between your remote and the upstream. 
+Navigate to the URL for your remote, click on the "Create a pull request" button,
+and follow the instructions there. 
