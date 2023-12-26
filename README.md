@@ -150,8 +150,3 @@ shiny new changes to your remote repository which you now want to introduce to
 the upstream repository. In practice, this is when your changes 
 go out to the world and to your collaborators. The basic process is
 to create a **pull request** between your remote and the upstream. 
-
-
-
-
-
