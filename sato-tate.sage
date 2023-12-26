@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 
-''' Elliptic curves'''
+''' Elliptic curves '''
 
-def ec_aps(lmfdb_label, primes_up_to = 100000):
+def ec_aps(lmfdb_label, primes_up_to=100000):
     # construct elliptic curve from its LMFDB label
     # (https://www.lmfdb.org/EllipticCurve/Q/)
     E = EllipticCurve(lmfdb_label)
@@ -13,9 +13,9 @@ def ec_aps(lmfdb_label, primes_up_to = 100000):
 def ec_histogram(label='11a1'):
     aps_histogram(ec_aps(label))
 
-''' Newforms of weight k >= 2'''
+''' Newforms of weight k >= 2 '''
 
-def modform_aps(N=11, k=2, num_primes = 5000):
+def modform_aps(N=11, k=2, num_primes=5000):
     #sage does not support weight one newform computations
     assert k >= 2
 
@@ -45,8 +45,7 @@ def aps_histogram(aps, B=85):
     # dumb hack to keep the display window open
     plt.show()
 
-
-''''-------------------------------------------------------------------------'''
+################################################################################
 
 # this is the function that gets run when you 
 # type `sage sato-tate.sage`
